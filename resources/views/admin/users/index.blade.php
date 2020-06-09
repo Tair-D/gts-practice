@@ -31,10 +31,12 @@
 
                     </table>
                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                    <a href="{{route('admin.users.create')}}"> <button type="button" class="btn btn-warning">+</button></a>
-                        <button type="button" class="btn btn-primary">Загрузить с Excel</button>
+                    <a href="api/save">
+                        <button type="button" class="btn btn-warning">+</button>
+                    </a>
+                    <button type="button" class="btn btn-primary">Загрузить с Excel</button>
 
-                        <button type="button" class="btn btn-success">Сохранить</button>
+                    <button type="button" class="btn btn-success">Сохранить</button>
 
                 </div>
             </div>

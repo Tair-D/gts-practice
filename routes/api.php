@@ -24,11 +24,11 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
     Route::resource('/users', 'UsersController', ['except' => ['show', 'store']]);
     // Route::post('/save', 'UsersController@save');
 });
-// Route::post('/save', 'UsersController@save');
 
 Route::group(['middleware' => ['web']], function () {
-    //routes here
     Route::get('/import_excel', 'ImportExcelController@index');
     Route::post('/import_excel/import', 'ImportExcelController@import');
+    Route::post('/save', 'TableController@save');
+    Route::get('/create', 'TableController@index');
 });
 Route::post('import', 'ImportExcelController@import')->name('import');

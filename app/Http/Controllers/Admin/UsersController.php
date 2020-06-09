@@ -32,29 +32,7 @@ class UsersController extends Controller
         ]);
     }
 
-    // public function create(Request $request)
-    // {
-        // return $request->all();
-        // $request = $request->all();
-        // DB::beginTransaction();
-        // try {
-        //     $user = new User();
-        //     $user->name = $request['Name'];
-        //     $user->last_name = $request['LastName'];
-        //     $user->birth_date = $request['BirthDate'];
-        //     $user->save();
-
-        //     DB::commit();
-        //     return response()->json($user, 200);
-        // } catch (\Exception $e) {
-        //     DB::rollback();
-        //     return response()->json($e->getTrace(), 500);
-        // }
-    //     $roles = Role::all();
-
-    //     return view('admin.users.create');
-    // }
-
+    
     public function save(Request $request)
     {
         return 'Saved';

@@ -47,6 +47,8 @@
             <td width="30%" align="left">
               <input type="submit" name="upload" class="btn btn-primary" value="Upload">
             </td>
+
+
           </tr>
           <tr>
             <td width="40%" align="right"></td>
@@ -81,6 +83,10 @@
             @endforeach
 
           </table>
+          
+          <a href="create">
+            <button type="button" class="btn btn-warning">+</button>
+          </a>
         </div>
       </div>
     </div>

@@ -15,21 +15,11 @@ class ImportExcelController extends Controller
         return view('import_excel', compact('data'));
     }
 
-    // public function import() 
-    // {
-    //     Excel::import(new UsersImport,request()->file('file'));
-
-    //     return back();
-    // }
-
     function import(Request $request)
     {
         $this->validate($request, [
             'select_file'  => 'required|mimes:xls,xlsx'
         ]);
-
-        // $path = $request->file('select_file')->getRealPath();
-        // $name = $request->file('select_file')->getFilename();
 
         $path1 = $request->file('select_file')->store('temp');
         $path = storage_path('app') . '/' . $path1;
@@ -43,7 +33,7 @@ class ImportExcelController extends Controller
                     'birth_date'  => $row[3],
                 );
             }
-            
+
 
             if (!empty($insert_data)) {
                 DB::table('customers')->insert($insert_data);

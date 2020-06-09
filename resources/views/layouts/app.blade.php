@@ -63,6 +63,9 @@
                                     <a class="dropdown-item" href="{{ route('admin.users.index') }}">
                                         User Managment
                                     </a>
+                                    <a class="dropdown-item" href="api/import_excel">
+                                       Excel
+                                    </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
