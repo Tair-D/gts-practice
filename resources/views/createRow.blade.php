@@ -14,16 +14,16 @@
 
                         @csrf
                         <div class="form-group">
-                            <label for="firstName">First Name</label>
-                            <input type="text" class="form-control" id="firstNameInput" placeholder="Введите имя">
+                            <label for="name">First Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Введите имя">
                         </div>
                         <div class="form-group">
-                            <label for="firstName">Last Name</label>
-                            <input type="text" class="form-control" id="lastNameInput" placeholder="Введите фамилию">
+                            <label for="last_name">Last Name</label>
+                            <input type="text" class="form-control" id="last_name" placeholder="Введите фамилию">
                         </div>
                         <div class="form-group">
-                            <label for="firstName">BirthDate</label>
-                            <input type="date" class="form-control" id="birthInput" >
+                            <label for="birth_date">BirthDate</label>
+                            <input type="date" class="form-control" id="birth_date" >
                         </div>
 
                         <button type="submit" class="btn btn-primary">Сохранить</button>

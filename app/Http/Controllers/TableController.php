@@ -16,21 +16,17 @@ class TableController extends Controller
     }
     public function save(Request $request)
     {
-        if (Gate::denies('add-row')) {
-            return redirect(route('import_excel'));
-        }
+        // if (Gate::denies('add-row')) {
+        //     return redirect(route('import_excel'));
+        // }
         $request = $request->all();
         DB::beginTransaction();
 
         try {
             $customer = new Customer();
-            $customer->name = $request['Name'];
-            $customer->last_name = $request['LastName'];
-            $customer->birth_date = $request['BirthDate'];
-            $customer->save();
+            $customer->create($request);
             DB::commit();
-            // return back();
-            // return response()->json($customer, 200);
+            return back();
         } catch (\Exception $e) {
             DB::rollback();
             return response()->json($e->getTrace(), 500);
